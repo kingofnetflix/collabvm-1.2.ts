@@ -16,14 +16,22 @@ The CollabVM server requires the following to be installed on your server:
 3. A Rust toolchain (e.g: [rustup](https://rustup.rs))
 4. NASM assembler
 
-### Installing dependencies on Arch
+### Setup on Arch
 
-1. Install dependencies: `sudo pacman --needed --noconfirm -Sy nodejs nasm rust`
-2. Enable corepack: `sudo corepack enable`
+1. Clone it: `git clone --recurse-submodules https://github.com/computernewb/collabvm-1.2.ts`
+2. Install dependencies: `sudo pacman --needed --noconfirm -Sy nodejs nasm rust`
+3. Enable corepack: `sudo corepack enable`
 
-### Installing dependencies on Debian
+### Setup on Debian
 
-TODO
+1. Clone it: `git clone --recurse-submodules https://github.com/computernewb/collabvm-1.2.ts`
+2. Install dependencies:
+```
+$ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt install nodejs -y
+$ sudo apt install qemu-kvm nasm -y
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+3. Enable corepack: `corepack enable` (if that doesn't work try `codepack install` first)
 
 ## Running
 
